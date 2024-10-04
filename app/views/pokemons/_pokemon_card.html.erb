@@ -1,0 +1,7 @@
+<div class="pokemon-card">
+  <%= link_to cl_image_tag(pokemon.photo.key, class: "pokemon-img", alt: "Picture of a pokemon"), pokemon_path(pokemon) %>
+  <div>
+    <h5 class="card-title"><%= pokemon.name %></h5>
+    <h6 class="card-subtitle"><%= pokemon.element_type %></h6>
+  </div>
+</div>

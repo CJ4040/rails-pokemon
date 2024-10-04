@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Here are all the Pokemon!</h1>
+
+
+  <div class="grid">
+    <% @pokemons.each do |pokemon| %>
+      <%= render partial: "pokemon_card", locals: { pokemon: pokemon } %>
+    <% end  %>
+  </div>
+
+</div>

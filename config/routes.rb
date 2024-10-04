@@ -11,6 +11,10 @@ Rails.application.routes.draw do
 
   get "/pokemons", to: "pokemons#index"
   get "/pokemons/:id", to: "pokemons#show", as: "pokemon"
+  get "/pokemons/search", to: "pokemons#search,", as: "pokemons_search"
 
-  get "/trainers", to:"trainers#index:"
+  get "/trainers", to:"trainers#index"
+  get "/trainers/:id", to: "trainers#show", as: "trainer"
+
+
 end

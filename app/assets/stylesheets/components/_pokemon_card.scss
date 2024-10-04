@@ -1,13 +1,17 @@
-.pokemon-card{
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background-color: rgb(221, 169, 169);
   border-radius: 5%;
   border: 5px solid yellow;
   padding: 5px;
-  align-items: center;
-  text-align: center;
 }
 
-.pokemon-img{
+.pokemon-img {
+  padding: 10px;
   border: 1px solid yellow;
   background-color: green;
 }

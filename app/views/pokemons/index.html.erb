@@ -1,5 +1,17 @@
 <div class="container">
   <h1>Here are all the Pokemon!</h1>
+  <%= link_to "See all trainers here", trainers_path %>
+
+
+
+  <div class="mb-4 mt-4">
+    <%= form_with url: pokemons_search_path, method: :get do |form| %>
+      <%= form.label :query, "Search for a Pokemon:" %>
+      <%= form.text_field :query, placeholder: "Enter a pokemon name" %>
+      <%= form.submit "Search" %>
+    <% end %>
+  </div>
+
 
 
   <div class="grid">
@@ -7,5 +19,4 @@
       <%= render partial: "pokemon_card", locals: { pokemon: pokemon } %>
     <% end  %>
   </div>
-
 </div>

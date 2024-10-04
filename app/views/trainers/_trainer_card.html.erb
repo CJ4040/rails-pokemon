@@ -1,0 +1,10 @@
+<div class="trainer-card">
+  <div>
+    <%= link_to cl_image_tag(trainer.photo.key, class:"trainer-img", alt: "Picture of a trainer"), trainer_path(trainer) %>
+  </div>
+  <div>
+    <h5 class="card-title"><%= trainer.name %></h5>
+    <h6 class="card-subtitle"><%= trainer.age %> years old</h6>
+    <h6 class="card-subtitle"><%= trainer.pokemons.count %> Pokemons!</h6>
+  </div>
+</div>

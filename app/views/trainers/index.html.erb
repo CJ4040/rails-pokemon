@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Here are all the Trainers!</h1>
+
+
+  <div class="grid gap-6">
+    <% @trainers.each do |trainer| %>
+      <%= render partial: "trainer_card", locals: { trainer: trainer } %>
+    <% end  %>
+  </div>
+
+  <div>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a href="">Add a trainer here</a>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Back to Pokedex", pokemons_path %>
+      </li>
+    </ul>
+  </div>
+</div>

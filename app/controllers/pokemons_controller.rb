@@ -6,7 +6,11 @@ class PokemonsController < ApplicationController
 
   def show
     @pokemon = Pokemon.find(params[:id])
-    # raise
+  end
+
+  def search
+    @search = Pokemon.find_by(params[:query])
+
   end
 
 

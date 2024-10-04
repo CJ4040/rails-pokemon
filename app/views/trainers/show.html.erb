@@ -1,0 +1,20 @@
+<h1>Here is one trainer!</h1>
+
+<div class="two-columns">
+
+  <div>
+    <%= render partial: "trainer_card", locals: { trainer: @trainer } %>
+    <%= link_to "<< Back to Pokedex", pokemons_path %>
+  </div>
+
+  <div>
+    <% @trainer.pokemons.each do |pokemon| %>
+      <%= render partial: "pokemons/pokemon_card", locals: { pokemon: pokemon } %>
+      <% pokemon.pokeballs.each do |pokeball| %>
+        <p class="text-align-center">Caught on: <%= pokeball.caught_on %></p>
+      <% end %>
+
+    <% end %>
+  </div>
+
+</div>
